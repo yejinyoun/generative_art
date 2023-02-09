@@ -14,6 +14,7 @@ art4();
 art5();
 art6();
 art7();
+art8();
 
 function art1() {
   for (let i = 100; i <= 300; i += 20) {
@@ -100,7 +101,23 @@ function art7() {
     circle.className = "circle";
     circle.style.width = `${i}px`;
     circle.style.height = `${i}px`;
-    document.querySelector("#artwork7").appendChild(circle);
     circle.style.transform = `translate(${i}px,${-i / 2}px)`;
+    document.querySelector("#artwork7").appendChild(circle);
+    console.log(i);
+  }
+}
+
+// 8. box getting smaller and rotating and translating
+
+function art8() {
+  for (let i = 50; i <= 200; i += 10) {
+    const box = document.createElement("div");
+    box.className = "box";
+    box.style.width = `${i}px`;
+    box.style.height = `${i}px`;
+    box.style.transform = `translate(${i / 2}px)`;
+    box.style.transform = `rotate(${i}deg)`;
+    document.querySelector("#artwork8").appendChild(box);
+    console.log(i);
   }
 }
