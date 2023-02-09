@@ -11,6 +11,7 @@ art1();
 art2();
 art3();
 art4();
+art5();
 
 function art1() {
   for (let i = 100; i <= 300; i += 20) {
@@ -59,6 +60,19 @@ function art4() {
     document.querySelector("#artwork4").appendChild(box);
     box.style.transform = `translate(${i}px,${i}px)`;
 
+    console.log(i);
+  }
+}
+
+//5. circle getting bigger
+
+function art5() {
+  for (let i = 1; i <= 512; i *= 2) {
+    const circle = document.createElement("div");
+    circle.className = "circle";
+    circle.style.width = `${i}px`;
+    circle.style.height = `${i}px`;
+    document.querySelector("#artwork5").appendChild(circle);
     console.log(i);
   }
 }
