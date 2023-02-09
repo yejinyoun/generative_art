@@ -13,6 +13,7 @@ art3();
 art4();
 art5();
 art6();
+art7();
 
 function art1() {
   for (let i = 100; i <= 300; i += 20) {
@@ -88,5 +89,18 @@ function art6() {
     circle.style.transform = `translate(${i - 50}px)`;
     circle.style.transform = `rotate(${i * 4}deg)`;
     console.log(i);
+  }
+}
+
+// 7. circle getting bigger and translating
+
+function art7() {
+  for (let i = 0; i <= 200; i += 10) {
+    const circle = document.createElement("div");
+    circle.className = "circle";
+    circle.style.width = `${i}px`;
+    circle.style.height = `${i}px`;
+    document.querySelector("#artwork7").appendChild(circle);
+    circle.style.transform = `translate(${i}px,${-i / 2}px)`;
   }
 }
