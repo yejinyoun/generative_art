@@ -71,7 +71,7 @@ function art4() {
 //5. circle getting bigger
 
 function art5() {
-  for (let i = 1; i <= 512; i *= 2) {
+  for (let i = 1; i < 512; i *= 2) {
     const circle = document.createElement("div");
     circle.className = "circle";
     circle.style.width = `${i}px`;
@@ -84,7 +84,7 @@ function art5() {
 // 6. circle translating and rotating
 
 function art6() {
-  for (let i = -20; i <= 45; i += 5) {
+  for (let i = -20; i < 45; i += 5) {
     const circle = document.createElement("div");
     circle.className = "circle";
     document.querySelector("#artwork6").appendChild(circle);
@@ -126,7 +126,7 @@ function art8() {
 // 9. box and a circle getting bigger
 
 function art9() {
-  for (let i = 50; i <= 200; i += 30) {
+  for (let i = 50; i < 200; i += 30) {
     const circle = document.createElement("div");
     circle.className = "circle";
     circle.style.width = `${i}px`;
