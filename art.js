@@ -10,6 +10,7 @@ console.log("art!!!!");
 art1();
 art2();
 art3();
+art4();
 
 function art1() {
   for (let i = 100; i <= 300; i += 20) {
@@ -45,6 +46,19 @@ function art3() {
     circle.style.width = `${i}px`;
     circle.style.height = `${i}px`;
     document.querySelector("#artwork3").appendChild(circle);
+    console.log(i);
+  }
+}
+
+// 4. box moving (translating)
+
+function art4() {
+  for (let i = -90; i <= 90; i += 20) {
+    const box = document.createElement("div");
+    box.className = "box";
+    document.querySelector("#artwork4").appendChild(box);
+    box.style.transform = `translate(${i}px,${i}px)`;
+
     console.log(i);
   }
 }
