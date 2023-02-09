@@ -15,6 +15,7 @@ art5();
 art6();
 art7();
 art8();
+art9();
 
 function art1() {
   for (let i = 100; i <= 300; i += 20) {
@@ -118,6 +119,26 @@ function art8() {
     box.style.transform = `translate(${i / 2}px)`;
     box.style.transform = `rotate(${i}deg)`;
     document.querySelector("#artwork8").appendChild(box);
+    console.log(i);
+  }
+}
+
+// 9. box and a circle getting bigger
+
+function art9() {
+  for (let i = 50; i <= 200; i += 30) {
+    const circle = document.createElement("div");
+    circle.className = "circle";
+    circle.style.width = `${i}px`;
+    circle.style.height = `${i}px`;
+
+    const box = document.createElement("div");
+    box.className = "box";
+    box.style.width = `${i}px`;
+    box.style.height = `${i}px`;
+
+    document.querySelector("#artwork9").appendChild(circle);
+    document.querySelector("#artwork9").appendChild(box);
     console.log(i);
   }
 }
